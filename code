@@ -32,9 +32,9 @@ void saveRecords() {
                 << "Name: " << tenant_name[i] << "\n"
                 << "Apartment No.: " << apartment_no[i] << "\n"
                 << "Rent Month: " << rent_month[i] << "\n"
-                << "Rent Amount: $" << rent_amount[i] << "\n"
-                << "Electricity Bill: $" << electricity_bill[i] << "\n"
-                << "Total Amount: $" << total_amount[i] << "\n"
+                << "Rent Amount: Rs" << rent_amount[i] << "\n"
+                << "Electricity Bill: Rs" << electricity_bill[i] << "\n"
+                << "Total Amount: Rs" << total_amount[i] << "\n"
                 << "--------------------------\n"; // Separator for records
     }
     outfile.close();
@@ -58,10 +58,10 @@ void enter() {
         cout << "Name: ";             getline(cin, tenant_name[i]);  // Using getline for tenant name
         cout << "Apartment No.: ";    cin >> apartment_no[i];
         cout << "Rent Month (e.g., Jun-2025): "; cin >> rent_month[i];
-        cout << "Rent Amount: $";      cin >> rent_amount[i];
-        cout << "Electricity Bill: $"; cin >> electricity_bill[i];
+        cout << "Rent Amount: Rs";      cin >> rent_amount[i];
+        cout << "Electricity Bill: Rs"; cin >> electricity_bill[i];
         total_amount[i] = rent_amount[i] + electricity_bill[i];
-        cout << "Total Amount: $" << total_amount[i] << "\n";
+        cout << "Total Amount: Rs" << total_amount[i] << "\n";
     }
     saveRecords(); // Save records after entering
 }
@@ -78,9 +78,9 @@ void show() {
         cout << "Tenant ID: "     << tenant_id[i] << "\n";
         cout << "Apartment No.: " << apartment_no[i] << "\n";
         cout << "Rent Month: "    << rent_month[i] << "\n";
-        cout << "Rent Amount: $"   << rent_amount[i] << "\n";
-        cout << "Electricity Bill: $" << electricity_bill[i] << "\n";
-        cout << "Total Amount: $" << total_amount[i] << "\n";
+        cout << "Rent Amount: Rs"   << rent_amount[i] << "\n";
+        cout << "Electricity Bill: Rs" << electricity_bill[i] << "\n";
+        cout << "Total Amount: Rs" << total_amount[i] << "\n";
     }
 }
 
@@ -101,9 +101,9 @@ void searchRecord() {
             cout << "Name: "          << tenant_name[i] << "\n";
             cout << "Apartment No.: " << apartment_no[i] << "\n";
             cout << "Rent Month: "    << rent_month[i] << "\n";
-            cout << "Rent Amount: $"   << rent_amount[i] << "\n";
-            cout << "Electricity Bill: $" << electricity_bill[i] << "\n";
-            cout << "Total Amount: $" << total_amount[i] << "\n";
+            cout << "Rent Amount: Rs"   << rent_amount[i] << "\n";
+            cout << "Electricity Bill: Rs" << electricity_bill[i] << "\n";
+            cout << "Total Amount: Rs" << total_amount[i] << "\n";
             return;
         }
     }
@@ -127,9 +127,9 @@ void update() {
             cout << "Name: "          << tenant_name[i] << "\n";
             cout << "Apartment No.: " << apartment_no[i] << "\n";
             cout << "Rent Month: "    << rent_month[i] << "\n";
-            cout << "Rent Amount: $"   << rent_amount[i] << "\n";
-            cout << "Electricity Bill: $" << electricity_bill[i] << "\n";
-            cout << "Total Amount: $" << total_amount[i] << "\n";
+            cout << "Rent Amount: Rs"   << rent_amount[i] << "\n";
+            cout << "Electricity Bill: Rs" << electricity_bill[i] << "\n";
+            cout << "Total Amount: Rs" << total_amount[i] << "\n";
 
             cout << "\nEnter new data:\n";
             cout << "Tenant ID: ";        cin >> tenant_id[i];
@@ -137,10 +137,10 @@ void update() {
             cout << "Name: ";             getline(cin, tenant_name[i]);  // Using getline for tenant name
             cout << "Apartment No.: ";    cin >> apartment_no[i];
             cout << "Rent Month: ";       cin >> rent_month[i];
-            cout << "Rent Amount: $";      cin >> rent_amount[i];
-            cout << "Electricity Bill: $"; cin >> electricity_bill[i];
+            cout << "Rent Amount: Rs";      cin >> rent_amount[i];
+            cout << "Electricity Bill: Rs"; cin >> electricity_bill[i];
             total_amount[i] = rent_amount[i] + electricity_bill[i];
-            cout << "Total Amount: $" << total_amount[i] << "\n";
+            cout << "Total Amount: Rs" << total_amount[i] << "\n";
             saveRecords(); // Save records after updating
             cout << "Record updated.\n";
             return;
